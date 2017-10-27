@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <FriendListItem /> component Should render FriendListItem component  1`] = `
+<li
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <div>
+      <span>
+        Theodore Roosevelt
+      </span>
+    </div>
+    <div>
+      <b>
+        Sex: 
+      </b>
+      Male
+    </div>
+    <div>
+      <small>
+        xx friends in common
+      </small>
+    </div>
+  </div>
+  <div
+    className={undefined}
+  >
+    <button
+      className="btn btn-default undefined"
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-star"
+      />
+    </button>
+    <button
+      className="btn btn-default undefined"
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-trash"
+      />
+    </button>
+  </div>
+</li>
+`;

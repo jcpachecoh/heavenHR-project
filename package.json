@@ -2,6 +2,21 @@
   "name": "heaven-interview",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(css|jpg|png|svg)$": "<rootDir>/empty-module.js",
+      "^.+\\.css$": "identity-obj-proxy"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTest.js",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6",
+      "ios.js"
+    ],
+    "exclude": "/node_modules/"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
@@ -11,12 +26,22 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "babel-jest": "^21.2.0",
+    "babel-preset-es2015": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.3",
+    "es2015": "0.0.0",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-scripts": "0.9.5",
+    "react-test-renderer": "^16.0.0",
+    "sinon": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   }
 }

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <FriendList /> component Should render FriendList component  1`] = `
+<div>
+  <ul
+    className={undefined}
+  >
+    <FriendListItem
+      addFriend={[Function]}
+      deleteFriend={[Function]}
+      id={0}
+      name="Theodore Roosevelt"
+      sex="Male"
+      starFriend={[Function]}
+      starred={true}
+    />
+    <FriendListItem
+      addFriend={[Function]}
+      deleteFriend={[Function]}
+      id={1}
+      name="Abraham Lincoln"
+      sex="Male"
+      starFriend={[Function]}
+      starred={false}
+    />
+  </ul>
+  <ul
+    id="page-numbers"
+  >
+    <li
+      id={1}
+      onClick={[Function]}
+    >
+      1
+    </li>
+    <li
+      id={2}
+      onClick={[Function]}
+    >
+      2
+    </li>
+  </ul>
+</div>
+`;

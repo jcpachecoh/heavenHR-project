@@ -10,7 +10,6 @@ class FriendList extends Component {
       friendsPerPage: 2,
       friends: this.props.friends
     };
-    console.log(this.state.friends);
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -25,8 +24,6 @@ class FriendList extends Component {
 
     const indexOfLastFriend = currentPage * friendsPerPage;
     const indexOfFirstFriend= indexOfLastFriend - friendsPerPage;
-    console.log('last'+indexOfLastFriend)
-    console.log('first'+indexOfFirstFriend)
     const currentFriends = this.props.friends.slice(indexOfFirstFriend, indexOfLastFriend);
 
     const renderFriends = currentFriends.map((friend, index) => {
