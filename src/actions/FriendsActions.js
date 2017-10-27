@@ -10,6 +10,7 @@ export function addFriend(name, sex) {
 }
 
 export function deleteFriend(id) {
+  console.log(id);
   return {
     type: types.DELETE_FRIEND,
     id

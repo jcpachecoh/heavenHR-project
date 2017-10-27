@@ -11,7 +11,7 @@ class AddFriendInput extends Component {
         type="text"
         autoFocus="true"
         className={classnames('form-control', styles.addFriendInput)}
-        placeholder="Type the name of a friend"
+        placeholder="Type the name of a friend and press enter"
         value={this.state.name}
         onChange={this.handleChange.bind(this)}
         onKeyDown={this.handleSubmit.bind(this)} />
@@ -43,7 +43,7 @@ class AddFriendInput extends Component {
     super(props, context);
     this.state = {
       name: this.props.name || '',
-      gender: this.props.gender,
+      sex: this.props.sex,
       state: ""
     };
   }

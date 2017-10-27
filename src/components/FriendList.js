@@ -7,9 +7,10 @@ class FriendList extends Component {
     super(props);
     this.state = {
       currentPage: 1,
-      friendsPerPage: 1,
+      friendsPerPage: 2,
       friends: this.props.friends
     };
+    console.log(this.state.friends);
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -20,17 +21,25 @@ class FriendList extends Component {
   }
 
   render () {
-    const { friends, currentPage, todosPerPage } = this.state;
+    const { currentPage, friendsPerPage } = this.state;
 
-    const indexOfLastTodo = currentPage * todosPerPage;
-    const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
-    const currentFriends = friends.slice(indexOfFirstTodo, indexOfLastTodo);
+    const indexOfLastFriend = currentPage * friendsPerPage;
+    const indexOfFirstFriend= indexOfLastFriend - friendsPerPage;
+    console.log('last'+indexOfLastFriend)
+    console.log('first'+indexOfFirstFriend)
+    const currentFriends = this.props.friends.slice(indexOfFirstFriend, indexOfLastFriend);
 
-    const renderFriends =  this.state.friend.map((friend, index) => {
+    const renderFriends = currentFriends.map((friend, index) => {
+      let indexFriend;
+      if(currentPage !== 1) 
+        indexFriend = index + currentPage;
+      else
+        indexFriend = index;
+
       return (
         <FriendListItem
-          key={index}
-          id={index}
+          key={indexFriend}
+          id={indexFriend}
           name={friend.name}
           sex={friend.sex}
           starred={friend.starred}
@@ -39,7 +48,7 @@ class FriendList extends Component {
     });
 
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(friends.length / todosPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(this.props.friends.length / friendsPerPage); i++) {
       pageNumbers.push(i);
     }
 
@@ -48,8 +57,7 @@ class FriendList extends Component {
         <li
           key={number}
           id={number}
-          onClick={this.handleClick}
-        >
+          onClick={this.handleClick}>
           {number}
         </li>
       );
