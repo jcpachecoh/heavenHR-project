@@ -16,6 +16,16 @@ const initialState = {
       name: 'George Washington',
       sex: 'Female',
       starred: false
+    },
+    {
+      name: 'Policarpa',
+      sex: 'Female',
+      starred: false
+    },
+    {
+      name: 'Martha Washington',
+      sex: 'Female',
+      starred: false
     }
   ]
 };

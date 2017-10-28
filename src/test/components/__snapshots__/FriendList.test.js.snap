@@ -39,6 +39,12 @@ exports[`Testing <FriendList /> component Should render FriendList component  1`
     >
       2
     </li>
+    <li
+      id={3}
+      onClick={[Function]}
+    >
+      3
+    </li>
   </ul>
 </div>
 `;

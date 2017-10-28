@@ -5,15 +5,18 @@ yarn install
 yarn start
 open http://localhost:3000
 ```
+```
+npm install
+npm start
+open http://localhost:3000
+```
 
-## Tasks
+##Testing
+npm test
 
-- Please add pagination support to the list when there are more than 2 entries
-- Please add option to select sex of a friend male/female and display it
-- Please add tests using your preferred testing tool (jest, mocha, should.js ...)
+## Observations
 
-## Objectives
-
-- You have received a working example so please do not upgrade any packages unless you really have to.
-- Please check for small things like syntax errors, since details matter.
-- Please deliver something that works, non working project is an automatic disqualification
+- All tasks were completed you can installed either yarn or npm with command install.
+- In order to select sex the app shows the sex icon and both fields are mandatory sex and friend's name
+- The user interface holds some user alerts with the same styles that were configured at the beginning, also I put more data in the friend list to test pagination.
+- Testing was implemented with jest enzyme, chai 

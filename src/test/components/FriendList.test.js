@@ -19,6 +19,16 @@ describe('Testing <FriendList /> component', () => {
               },
               {
                 name: 'George Washington',
+                sex: 'Male',
+                starred: false
+              },
+              {
+                name: 'Policarpa',
+                sex: 'Female',
+                starred: false
+              },
+              {
+                name: 'Martha Washington',
                 sex: 'Female',
                 starred: false
               }
